@@ -1,0 +1,118 @@
+[
+  {
+    "id": "ddad73fa-072c-4b39-abd9-c95db0c99637",
+    "nome": "Formas graves de tuberculose",
+    "vacinas": [
+      {
+        "id": "397cae74-44d8-4a98-9699-9aba54c23d20",
+        "nome": "Bacilo Calmette–Guérin",
+        "uso": "Injetável"
+      }
+    ],
+    "doses_minimas": 1
+  },
+  {
+    "id": "a019b72a-8814-447f-ace2-8b8474d79a1c",
+    "nome": "Poliomielite infantil",
+    "vacinas": [
+      {
+        "id": "c5f66b66-b70c-4fa2-a20b-7fc0e61e1d41",
+        "nome": "VIP Anti-Pólio",
+        "uso": "Injetável"
+      },
+      {
+        "id": "84159353-5ed8-4353-b1f7-ef26c6bdf4fc",
+        "nome": "VOP Anti-Pólio",
+        "uso": "Oral"
+      }
+    ],
+    "doses_minimas": 3
+  },
+  {
+    "id": "55fee0a2-4eb7-422b-b468-556bf6726f33",
+    "nome": "Difteria, tétano e coqueluche",
+    "vacinas": [
+      {
+        "id": "a2bf9939-acc2-439c-9e9c-7329f73d5cc3",
+        "nome": "Vacina Tetravalente",
+        "uso": "Injetável"
+      }
+    ],
+    "doses_minimas": 3
+  },
+  {
+    "id": "3dfa6403-1601-452f-9f24-905100ca41c9",
+    "nome": "Sarampo, Rubéula e Caxumba",
+    "vacinas": [
+      {
+        "id": "c9c4ebab-bba4-4274-9eb1-d846984f1ca4",
+        "nome": "Vacina Tríplice viral",
+        "uso": "Injetável"
+      }
+    ],
+    "doses_minimas": 3
+  },
+  {
+    "id": "1dd7d5eb-6e60-49fb-b8c4-88039bef387c",
+    "nome": "Hepatite B",
+    "vacinas": [
+      {
+        "id": "7c31dce2-feac-42af-a7d7-7fc8e1b56f8a",
+        "nome": "Vacina da Hepatite B",
+        "uso": "Injetável"
+      }
+    ],
+    "doses_minimas": 3
+  },
+  {
+    "id": "1d60c097-d804-46e6-884e-617c39f20b7f",
+    "nome": "Febre Amarela",
+    "vacinas": [
+      {
+        "id": "bf61ee5e-0e9c-4f0e-9577-e7d95b3631c8",
+        "nome": "Vacina da Febre Amarela",
+        "uso": "Injetável"
+      }
+    ],
+    "doses_minimas": 1
+  },
+  {
+    "id": "f17bf88b-88d3-403a-96e4-e475fdd9f5f3",
+    "nome": "Influenza",
+    "vacinas": [
+      {
+        "id": "574aa6a3-ebc2-40dc-a696-430f06167b0e",
+        "nome": "Vacina contra Influenza",
+        "uso": "Injetável"
+      }
+    ],
+    "doses_minimas": 1
+  },
+  {
+    "id": "125f08bf-6ac0-457f-a9fe-ba22ca4fa726",
+    "nome": "Coronavírus Sars-CoV-2",
+    "vacinas": [
+      {
+        "id": "4fb28cef-d353-4c4d-944b-cec86916828c",
+        "nome": "Tozinameran",
+        "uso": "Injetável"
+      },
+      {
+        "id": "17b1cc87-8929-4cfa-87d3-06d3e7a9275e",
+        "nome": "MRNA-1273",
+        "uso": "Injetável"
+      },
+      {
+        "id": "ecc6993d-b2a0-4258-9bae-5e419268fc38",
+        "nome": "CoronaVac",
+        "uso": "Injetável"
+      },
+      {
+        "id": "ba689479-9b09-49d5-b85f-293b590638e7",
+        "nome": "Covishield",
+        "uso": "Injetável"
+      }
+    ],
+    "doses_minimas": 2
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "outDir": "__build",
+    "target": "es6",
+    "module": "CommonJS",
+    "typeRoots": ["./src/types/d"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "exclude": [
+    "./tsbuild.ts"
+  ]
+}

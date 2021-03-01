@@ -1,0 +1,10 @@
+{
+  "*": {
+    "time": 30000,
+    "max": 60
+  },
+  "/api/vacinas/doses/adicionar": {
+    "time": 30000,
+    "max": 10
+  }
+}

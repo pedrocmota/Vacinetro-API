@@ -1,0 +1,84 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/object1614113998.json",
+  "title": "Root",
+  "type": "array",
+  "default": [],
+  "minItems": 1,
+  "items": {
+    "$id": "#root/items",
+    "title": "Items",
+    "type": "object",
+    "required": [
+      "id",
+      "nome",
+      "vacinas",
+      "doses_minimas"
+    ],
+    "properties": {
+      "id": {
+        "$id": "#root/items/id",
+        "title": "Id",
+        "type": "string",
+        "default": "",
+        "pattern": "^.*$"
+      },
+      "nome": {
+        "$id": "#root/items/nome",
+        "title": "Nome",
+        "type": "string",
+        "default": "",
+        "pattern": "^.*$"
+      },
+      "vacinas": {
+        "$id": "#root/items/vacinas",
+        "title": "Vacinas",
+        "type": "array",
+        "default": [],
+        "minItems": 1,
+        "items": {
+          "$id": "#root/items/vacinas/items",
+          "title": "Items",
+          "type": "object",
+          "required": [
+            "id",
+            "nome",
+            "uso"
+          ],
+          "properties": {
+            "id": {
+              "$id": "#root/items/vacinas/items/id",
+              "title": "Id",
+              "type": "string",
+              "default": "",
+              "pattern": "^.*$"
+            },
+            "nome": {
+              "$id": "#root/items/vacinas/items/nome",
+              "title": "Nome",
+              "type": "string",
+              "default": "",
+              "pattern": "^.*$"
+            },
+            "uso": {
+              "$id": "#root/items/vacinas/items/uso",
+              "title": "Uso",
+              "type": "string",
+              "default": "Injetável",
+              "enum": ["Injetável", "Oral"]
+            }
+          }
+        }
+      },
+      "doses_minimas": {
+        "$id": "#root/items/doses_minimas",
+        "title": "Doses_minimas",
+        "type": "integer",
+        "default": 1,
+        "minimum": 1,
+        "exclusiveMaximum": 100
+      }
+    }
+  }
+}
