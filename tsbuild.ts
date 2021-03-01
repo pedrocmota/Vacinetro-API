@@ -15,7 +15,7 @@ const files: arquivos = [
   ['./src/database/vacinas.json', './database/vacinas.json', 'FILE'],
 
   ['./src/database/database.db', './database/database.db', 'FILE'],
-  ['./app*', './app', 'FOLDER']
+  ['./app', './app', 'FOLDER']
 ]
 
 exec('npx tsc', () => {
