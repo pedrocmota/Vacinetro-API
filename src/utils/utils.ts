@@ -30,10 +30,10 @@ export const safe = (unsafe: any) => {
   let safed:any = {}
   Object.keys(unsafe).forEach((value:string) => {
     const str:string = unsafe[value]
-    const removedTags = str.replace(/(<([^>]+)>)/gi, '');
+    const removedTags = str.replace(/(<([^>]+)>)/gi, '')
     const removedQuotes = removedTags.replace(/'/g, '\'\'')
     safed[value] = removedQuotes
-  });
+  })
   return safed
 }
 

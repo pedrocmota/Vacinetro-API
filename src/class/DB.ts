@@ -6,7 +6,7 @@ const DB = {
   aberto: false,
 
   open: () => {
-    sqlite.connect(path.join(__dirname, '../database/database.db'));
+    sqlite.connect(path.join(__dirname, '../database/database.db'))
     DB.aberto = true
   },
 

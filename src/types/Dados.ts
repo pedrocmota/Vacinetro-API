@@ -1,6 +1,6 @@
 export interface IDadosPessoas {
   nome: string,
-  nascimento: string
+  nascimento: string,
   localNascimento: string,
   endereco: string,
   cidade: string,
@@ -8,7 +8,5 @@ export interface IDadosPessoas {
   comprimento: number,
   peso: number,
   perimetroEncefalico: number,
-  tipoParto: PARTO_TYPES,
+  tipoParto: 'Normal' | 'Cesárea'
 }
-
-export type PARTO_TYPES = 'Normal' | 'Cesárea';

@@ -16,6 +16,7 @@
       "warn",
       "single"
     ],
+    "semi": ["warn", "never"],
     "no-empty-function": "off",
     "no-empty": "off",
     "no-empty-pattern": "off",
@@ -26,6 +27,25 @@
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/no-empty-interface": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
-    "@typescript-eslint/no-empty-function": "off"
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/naming-convention": [
+      "warn",
+      {
+        "selector": "interface",
+        "format": [
+          "PascalCase"
+        ]
+      }
+    ],
+    "@typescript-eslint/member-delimiter-style": ["warn", {
+      "multiline": {
+        "delimiter": "comma",
+        "requireLast": false
+      },
+      "singleline": {
+        "delimiter": "comma",
+        "requireLast": false
+      }
+    }]
   }
 }

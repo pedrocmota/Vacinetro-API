@@ -1,4 +1,4 @@
-import {Router} from 'express';
+import {Router} from 'express'
 import {Token} from '../class/Session'
 import {Pessoas, Profissionais} from '../class/Dados'
 import {APIUtils} from '../utils/utils'

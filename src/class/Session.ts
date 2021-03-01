@@ -11,20 +11,20 @@ export const Token = (token: string, res: Response, tipo: userTypes): IJWT | nul
     const tokenObj = jwt.verify(token, process.env.JWT_KEY) as IJWT
     const tipoObj = tokenObj.tipo
     if(tipo != tipoObj) {
-      if(!res.headersSent) res.send({erro: 'FORMATO_TOKEN_INVALIDO'})
+      if(!res.headersSent) res.send({tokenErro: 'FORMATO_TOKEN_INVALIDO'})
       return null
     }
     if(tipoObj == 'pessoa' && !Pessoas.existe(tokenObj.id)) {
-      if(!res.headersSent) res.send({erro: 'USUARIO_DESCONHECIDO'})
+      if(!res.headersSent) res.send({tokenErro: 'USUARIO_DESCONHECIDO'})
       return null
     }
     if(tipoObj == 'profissional' && !Profissionais.existe(tokenObj.id)) {
-      res.send({erro: 'USUARIO_DESCONHECIDO'})
+      res.send({tokenErro: 'USUARIO_DESCONHECIDO'})
       return null
     }
     return tokenObj
   } catch {
-    if(!res.headersSent) res.send({erro: 'TOKEN_INVALIDO'})
+    if(!res.headersSent) res.send({tokenErro: 'TOKEN_INVALIDO'})
     return null
   }
 }
@@ -40,7 +40,7 @@ export const Pessoa = {
       const token = jwt.sign({
         id: user.id,
         tipo: 'pessoa'
-      }, process.env.JWT_KEY);
+      }, process.env.JWT_KEY)
       return {token: token}
     } else {
       return {erro: 'NAO_ENCONTRADO'}
@@ -59,7 +59,7 @@ export const Profissional = {
         const token = jwt.sign({
           id: user.id,
           tipo: 'profissional'
-        }, process.env.JWT_KEY);
+        }, process.env.JWT_KEY)
         return {token: token}
       }
       return {erro: 'SENHA_INCORRETA'}

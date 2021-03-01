@@ -6,7 +6,7 @@ const formato_menor = 'DD/MM/YYYY'
 const Data = {
 
   dataAtual: () => {
-    return moment().tz('America/Sao_Paulo').format(formato);
+    return moment().tz('America/Sao_Paulo').format(formato)
   },
 
   valido: (data: string) => {

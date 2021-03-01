@@ -4,7 +4,7 @@ import delay from 'express-delay'
 import dotenv from 'dotenv'
 import cors from 'cors'
 import chalk from 'chalk'
-import dedent from 'dedent';
+import dedent from 'dedent'
 import path from 'path'
 import fs from 'fs'
 import {v4 as uuid} from 'uuid'
@@ -27,11 +27,11 @@ export const Configuration = (app: Express) => {
   const JWT_KEY = process.env.JWT_KEY
   if (!envIsValid(PORT) || !envIsNumer(PORT)) {
     console.error(chalk.red('Porta inválida'))
-    process.exit(1);
+    process.exit(1)
   }
   if (!envIsValid(DEV_DELAY) || !envIsNumer(DEV_DELAY) || parseInt(DEV_DELAY) < 0) {
     console.error(chalk.red('Delay inválido'))
-    process.exit(1);
+    process.exit(1)
   } else {
     if (DEV_DELAY != '0') {
       app.use(delay(DEV_DELAY as unknown as number))
@@ -44,10 +44,10 @@ export const Configuration = (app: Express) => {
   }
   if (!envIsValid(JWT_KEY) && JWT_KEY.length == 0) {
     console.error(chalk.red('Chave JWT inválida'))
-    process.exit(1);
+    process.exit(1)
   }
   if (X_POWERED_BY == 'false') {
-    app.disable('x-powered-by');
+    app.disable('x-powered-by')
   }
   if (CORS == 'true') {
     app.use(cors())
@@ -73,7 +73,7 @@ const setLimits = (app: Express) => {
           message: {'erro': 'MUITAS_REQUESTS'}
         }))
       }
-    });
+    })
   } else {
     if (process.env.INFO == 'true') {
       console.info(chalk.yellowBright('--> AVISO: Não foi possível encontrar o arquivo .limits.json'))

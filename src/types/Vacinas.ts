@@ -5,7 +5,7 @@ export interface IDoenca {
   nome: string,
   vacinas?: Array<IVacina>,
   doses_minimas?: number,
-  doses?: IDoseRetorno[],
+  doses?: IDoseRetorno[]
 }
 
 export interface IVacina {

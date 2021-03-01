@@ -10,7 +10,7 @@ const Vacinas = {
     const json:IDoenca[] = readJSON('../database/vacinas.json')
     json.forEach(element => {
       delete element.vacinas
-    });
+    })
     return json
   },
 
@@ -52,7 +52,7 @@ const Vacinas = {
       doenca.vacinas?.forEach(vacina => {
         if(vacina.id == id) nome = vacina.nome
       })
-    });
+    })
     return nome
   },
 
@@ -70,9 +70,9 @@ const Vacinas = {
           localAplicacao: dose.localAplicacao,
           validadeVacina: dose.validadeVacina
         })
-      });
+      })
       doenca.doses = doseRetorno
-    });
+    })
     return retorno
   }
 }

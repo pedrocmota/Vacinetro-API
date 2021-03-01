@@ -30,7 +30,7 @@ export const Pessoas = {
 
   getDados: (id: string) => {
     const retorno = DB.query(`SELECT 
-    nome, nascimento, localNascimento, 
+    id, nome, nascimento, localNascimento, 
     endereco, cidade, uf, comprimento, peso, 
     perimetroEncefalico, tipoParto from pessoas where id='${id}'
     `) as Array<IDadosPessoas>
@@ -42,7 +42,7 @@ export const Pessoas = {
     const retorno = DB.query(`SELECT id, nome, nascimento FROM
     pessoas where cpf='${cpf}'`) as Array<string>
     const dados = retorno[0]
-    return dados || {erro: 'NAO_ENCONTRADO'};
+    return dados || {erro: 'NAO_ENCONTRADO'}
   }
 }
 
@@ -72,7 +72,7 @@ export const Profissionais = {
   },
 
   getDados: (id: string) => {
-    const retorno = DB.query(`SELECT nome, nascimento, cpf, profissao, registro
+    const retorno = DB.query(`SELECT id, nome, nascimento, cpf, profissao, registro
     from profissionais where id='${id}'`)
     const dados = retorno[0]
     return dados

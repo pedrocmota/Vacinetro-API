@@ -1,6 +1,6 @@
-import {exec} from 'child_process';
-import path from 'path';
-import fs from 'fs-extra';
+import {exec} from 'child_process'
+import path from 'path'
+import fs from 'fs-extra'
 
 const root = process.cwd()
 const buildFolder = path.join(root, './__build')

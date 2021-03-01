@@ -1,4 +1,4 @@
-import {v4 as uuidv4} from 'uuid';
+import {v4 as uuidv4} from 'uuid'
 import DB from '../class/DB'
 import Vacinas from './Vacinas'
 import Data from './Data'
@@ -19,7 +19,7 @@ const Doses = {
     order by doenca, datetime(data)`) as Array<IDose>
     retorno.forEach(vacina => {
       vacina.vacina = Vacinas.pegarNomeVacinaPorID(vacina.vacina)
-    });
+    })
     return retorno
   },
 
@@ -33,7 +33,7 @@ const Doses = {
     doses.forEach(vacina => {
       vacina.vacina = Vacinas.pegarNomeVacinaPorID(vacina.vacina as string)
       vacina.doencaNome = Vacinas.pegarNomeDoencaPorID(vacina.doenca as string)
-    });
+    })
     const retorno: IDosePorProfissional = {
       nomes: {
         pessoa: pessoaNome,

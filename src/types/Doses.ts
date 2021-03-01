@@ -6,7 +6,7 @@ export interface IAdicionarDoseParam {
   lote: string,
   profissional: string,
   localAplicacao: string,
-  validadeVacina: string,
+  validadeVacina: string
 }
 
 export interface IDose {
