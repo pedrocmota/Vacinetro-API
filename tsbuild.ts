@@ -25,7 +25,7 @@ exec('npx tsc', () => {
       const dest = path.join(buildFolder, arrayFile[1])
       const tipo = arrayFile[2]
       if (tipo == 'FILE') fs.copyFileSync(entry, dest)
-      if (tipo == 'FOLDER') {
+      if (tipo == 'FOLDER' && !fs.existsSync(dest)) {
         fs.mkdirSync(dest)
       }
     }

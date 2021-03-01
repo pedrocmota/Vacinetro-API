@@ -22,10 +22,10 @@ app.use('/api/vacinas', Vacinas)
 app.use('/api/vacinas/doses', Doses)
 
 //Devolução do app
-app.use('/', express.static(path.join(__dirname, '../app/')))
+app.use('/', express.static(path.join(process.cwd(), '/app/')))
 app.use('*', (req, res) => {
   if (!res.headersSent) {
-    const index = path.join(__dirname, '../app/index.html')
+    const index = path.join(process.cwd(), '/app/index.html')
     if (fs.existsSync(index)) {
       res.sendFile(index)
     } else {

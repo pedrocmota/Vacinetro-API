@@ -81,11 +81,6 @@ const setLimits = (app: Express) => {
   }
 }
 
-const envFileExist = () => {
-  const envFile = path.join(process.cwd(), '/.env')
-  return fs.existsSync(envFile)
-}
-
 const envIsValid = (env: string) => {
   if (env == undefined) return false
   if (env.length == 0) return false
