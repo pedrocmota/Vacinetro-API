@@ -12,9 +12,9 @@ Este app é apenas um experimento em versão alpha, sendo aberto a qualquer tipo
 
 # Link dos respositórios dos apps
 
-Aplicativo do profissional (Web): [Repositório]()
+Aplicativo do profissional (Web): [Repositório](https://github.com/pedrocmota/Vacinetro-WEB)
 \
-Aplicativo da pessoa (mobile): [Repositório]()
+Aplicativo da pessoa (mobile): [Repositório](https://github.com/pedrocmota/Vacinetro-APP)
 
 # Instalação API
 
