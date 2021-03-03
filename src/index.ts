@@ -1,5 +1,6 @@
 import express from 'express'
 import chalk from 'chalk'
+import dedent from 'dedent'
 import path from 'path'
 import fs from 'fs'
 import Session from './routes/Session'
@@ -34,8 +35,10 @@ app.use('*', (req, res) => {
   }
 })
 
-app.listen(80, () => {
+app.listen(80, process.env.HOST, () => {
   if (process.env.INFO == 'true') {
-    console.info(chalk.greenBright(`Servidor iniciado na porta ${process.env.PORT}`))
+    console.info(chalk.greenBright(dedent`
+      Servidor iniciado com sucesso! Endereço: ${process.env.HOST}:${process.env.PORT}
+    `))
   }
 })

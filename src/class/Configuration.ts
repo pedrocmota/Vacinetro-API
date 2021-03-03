@@ -19,12 +19,17 @@ export const Configuration = (app: Express) => {
     )
   }
   dotenv.config()
+  const HOST = process.env.HOST
   const PORT = process.env.PORT
   const X_POWERED_BY = process.env.X_POWERED_BY
   const CORS = process.env.CORS
   const DEV_DELAY = process.env.DEV_DELAY
   const INFO = process.env.INFO
   const JWT_KEY = process.env.JWT_KEY
+  if (!envIsValid(HOST)) {
+    console.error(chalk.red('Host inválido'))
+    process.exit(1)
+  }
   if (!envIsValid(PORT) || !envIsNumer(PORT)) {
     console.error(chalk.red('Porta inválida'))
     process.exit(1)
@@ -94,6 +99,7 @@ const envIsNumer = (env: string) => {
 const createEnvFile = () => {
   const output = path.join(process.cwd(), '/.env')
   const envText = dedent(`
+    HOST=localhost
     PORT=80 
     X_POWERED_BY=false 
     CORS=false 

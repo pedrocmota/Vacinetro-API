@@ -25,6 +25,7 @@ export interface IDose {
 
 export interface IDoseRetorno {
   data?: string,
+  idProfissional?: string,
   profissional?: string,
   lote?: string,
   localAplicacao?: string,

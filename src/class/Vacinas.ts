@@ -65,6 +65,7 @@ const Vacinas = {
       dosesTomadas.forEach(dose => {
         doseRetorno.push({
           data: dose.data,
+          idProfissional: dose.profissional,
           profissional: Profissionais.getNome(dose.profissional),
           lote: dose.lote,
           localAplicacao: dose.localAplicacao,
